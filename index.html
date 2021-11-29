@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+</head>
+<body>
+    <header class=" mt-3 mx-3">
+        <a href="./scoreboard.html"><button type="button" class="btn btn-primary">View Scoreboard!</button></a>
+        <div id="timer" class="alert  alert-primary w-20 float-right">Time Remaining:<span id="secondsLeft"></span></div>
+    </header>
+
+    <main>
+        <div id='welcome' class="jumbotron bg-white mt-4 text-center ">
+            <h1 class="display-3">Welcome</h1>
+            <p class="lead">Be prepared to answer as many quiz questions as possible within the time limit. 
+                <br>
+                Wrong answers will result in a deduction of 10 seconds.</p>
+            <hr class="my-4">
+            <p class="lead">
+              <a id='start-quiz'class="btn btn-outline-primary btn-lg" href="#" role="button">Start Quiz!</a>
+            </p>
+          </div>
+
+          <div id='quizQuestions' class="jumbotron bg-white mt-4 text-center">
+            <h2 id='question'class="display-3"></h2>
+            <hr class="my-4">
+            <div id='choices'>
+                <button id='0'type="button" class="btn btn-primary w-50 my-1"></button>
+                <button id='1'type="button" class="btn btn-primary w-50 my-1"></button>
+                <button id='2'type="button" class="btn btn-primary w-50 my-1"></button>
+                <button id='3'type="button" class="btn btn-primary w-50 my-1"></button>
+            </div>
+          </div>
+
+          <div id='afterQuiz' class="jumbotron bg-white mt-4 text-center">
+            <h2 class="display-3">The Quiz is Over!</h2>
+            <h3 class="hd-4">Final Score: <span id="finalScoreDisplay"></span></h3>
+            <hr class="my-4">
+            <form id='User-form' class="form-group">
+                <label class="col-form-label" for="inputDefault">Add your name to the scoreboard!</label>
+                <input type="text" class="form-control" placeholder="Your name" id="user-text">
+            </form>
+          </div>
+    </main>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
