@@ -4,8 +4,9 @@ var leaderList = document.getElementById('leaders');
 var startoverButton = document.getElementById('start-over');
 var clearButton = document.getElementById('clearBoard');
 var noScoreWarning = document.getElementById('noscore-warning')
+//setting up global variables
 
-
+// Loads the scoreboard.
 function initScoreBoard(){
     scores = JSON.parse(localStorage.getItem('scores'))
     noScoreWarning.setAttribute('style','display:none')
@@ -14,6 +15,8 @@ function initScoreBoard(){
         leaderBoard.setAttribute('style','display:none')
         noScoreWarning.setAttribute('style','display:block')
     }
+    //if no scores then displays a warning
+    
     for(var i =0;i<scores.length;i++){
         var tr = document.createElement('tr')
         tr.setAttribute('class','table-primary')

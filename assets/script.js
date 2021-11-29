@@ -1,4 +1,4 @@
-//Our question set - stored as an array of objects
+// An array with each of the questions, the choices, and the correct variable by id.
 var questionData = [
     {
         question:"How do you search for event listeners in JS?",
@@ -47,7 +47,7 @@ quizSection.setAttribute('style','display:none')
 afterQuiz.setAttribute('style','display:none')
 
 
-//Function declarations
+//Function for final score. The score is out of 100, divided by the number of questions in the array.
 function finalScoreCalculator(){
     finalScore+=(100/questionData.length)
 }
@@ -63,12 +63,14 @@ function startTimer(){
           endofQuiz();
         }
       },1000)
+// Sets timer for the quiz. 
 };
 
 function clearTimer(){
     clearInterval(intervalOne);
 }
 
+//If incorrect answer, calls timePenalty. subtract 10 from the time.
 function timePenalty(){
     totalTime=totalTime-10;
     clearTimer();
@@ -86,6 +88,7 @@ function displayQuestion(){
     welcomeSection.setAttribute('style','display:none')
     question.textContent = questionData[qIndex].question;
     
+    //Displays the questions from the array in order.
     for(var i=0;i<questionData[qIndex].choices.length;i++){
         var id = document.getElementById(`${i}`);
         id.textContent = questionData[qIndex].choices[i]
@@ -93,6 +96,7 @@ function displayQuestion(){
 
 }
 
+// Function for choosing an answer. Loads the question and answer id
 function choiceSubmission(event){
     if (event.target.matches("button")) {
       var currentQuestion = questionData[qIndex];
@@ -106,6 +110,7 @@ function choiceSubmission(event){
       }
     }
 
+    //If there are still questions and the time is more than 0, display a question. Else, end quiz
     qIndex++;
     if((qIndex<questionData.length)&&(totalTime>0)){
         displayQuestion();
@@ -118,6 +123,7 @@ function choiceSubmission(event){
     }
 }
 
+//Form for submitting name and score.
 function onFormSubmit(event){
     event.preventDefault();
     var storedScores = JSON.parse(localStorage.getItem("scores"));
