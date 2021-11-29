@@ -6,7 +6,8 @@ A coding quiz application made from JavaScript, with html and bootstrap css.
 
 This project was made for challenge #4 in the UNCC Web Development boot-camp. The goal of this application was to code a timed quiz that tests JavaScript fundamentals and stores the scores of the user. I was not supplied any code and had to create everything from scratch.
 
-[Access application here]()
+[Access application here](https://graysontmiller.github.io/coding-quiz/)
+)
 
 ![Display Image](/assets/Deployed-Screenshot.png)
 
@@ -22,4 +23,4 @@ This project was made for challenge #4 in the UNCC Web Development boot-camp. Th
 
 # Final Thoughts
 
-This challenge was tough for me because I ended up falling very far behind for weeks 4 and 5 due to a mix of sickness and technical problems. I wasn't sure that I would be able to complete it on my own due to not being entirely through the week 4 lessons by the point of submission. I had to rely on the internet to find another application so that I could reverse engineer how that developer created it. I hope to return to this challenge in the future and redo it once I have a better understanding of how to create an application like this. 
+This challenge was tough for me because I ended up falling very far behind for weeks 4 and 5 due to a mix of sickness and technical problems. I wasn't sure that I would be able to complete it on my own due to not being entirely through the week 4 lessons by the point of submission. I had to rely on the internet to find another application so that I could reverse engineer how that developer created it. I hope to return to this challenge in the future and redo it once I have a better understanding of how to create an application like this. I am also continuing to have git issues. I hope to improve and become more accustomed to git soon now that I am able to catch up again. 
